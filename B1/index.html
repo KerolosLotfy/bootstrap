@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding</title>
 
@@ -56,6 +54,8 @@
           </div>
           <!-- Navbar Toggler -->
           <button
+            aria-label="btn"
+            type="button"
             class="navbar-toggler"
             data-toggle="collapse"
             data-target="#collapsibleNavbar"
@@ -134,10 +134,18 @@
             <!-- Form -->
             <form action="" class="form-inline">
               <div class="input-group mr-2">
-                <input type="search" class="form-control bg-dark text-light"
-                placeholder="Search by Courses id="searchInput" />
+                <input
+                  type="search"
+                  class="form-control bg-dark text-light"
+                  placeholder="Search by Courses"
+                  id="searchInput"
+                />
                 <div class="input-group-append">
-                  <button class="btn btn-success m-0" type="submit">
+                  <button
+                    aria-label="submit"
+                    class="btn btn-success m-0"
+                    type="submit"
+                  >
                     <i class="fa fa-search" aria-hidden="true"></i>
                   </button>
                 </div>
@@ -173,28 +181,35 @@
           <!-- header -->
           <div class="modal-header">
             <h4 class="modal-title">Login</h4>
-            <button class="close" data-dismiss="modal">&times;</button>
+            <button
+              class="close"
+              type="button"
+              aria-label="btn"
+              data-dismiss="modal"
+            >
+              &times;
+            </button>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
             <form action="/action_page.php">
               <div class="form-group">
-                <label for="email">Email address:</label>
+                <label for="Email">Email address:</label>
                 <input
                   type="email"
                   class="form-control bg-dark text-light"
                   placeholder="Enter email"
-                  id="email"
+                  id="Email"
                 />
               </div>
               <div class="form-group">
-                <label for="pwd">Password:</label>
+                <label for="pass">Password:</label>
                 <input
                   type="password"
                   class="form-control bg-dark text-light"
                   placeholder="Enter password"
-                  id="pwd"
+                  id="pass"
                 />
               </div>
               <div class="form-group">
@@ -211,7 +226,14 @@
 
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button
+              class="btn btn-danger"
+              aria-label="btn"
+              type="button"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
@@ -224,7 +246,14 @@
           <!-- header -->
           <div class="modal-header">
             <h4 class="modal-title">Signup</h4>
-            <button class="close" data-dismiss="modal">&times;</button>
+            <button
+              class="close"
+              aria-label="btn"
+              type="button"
+              data-dismiss="modal"
+            >
+              &times;
+            </button>
           </div>
 
           <!-- Modal body -->
@@ -292,7 +321,14 @@
 
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button
+              class="btn btn-danger"
+              aria-label="btn"
+              type="button"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
@@ -314,7 +350,10 @@
           <!-- SlideShow -->
           <div class="carousel-inner h-100 w-100">
             <div class="carousel-item h-100 w-100 active">
-              <img src="images/working-code.jpg" alt="" />
+              <picture>
+                <source srcset="images/working-code.avif" type="image/avif" />
+                <img src="images/working-code.jpg" alt="Description" />
+              </picture>
               <!-- main Title -->
               <div
                 class="d-flex flex-column justify-content-center p-1 main-title h-100 carousel-caption"
@@ -322,14 +361,28 @@
                 <h2 class="pl-1">Welcome In Coding</h2>
 
                 <h5 class="text-muted pl-1">{ JavaScript }</h5>
-                <button class="btn btn-dark w-auto">View This Course</button>
+                <button
+                  class="btn btn-dark w-auto"
+                  aria-label="btn"
+                  type="button"
+                >
+                  View This Course
+                </button>
               </div>
             </div>
             <div class="carousel-item h-100 w-100">
-              <img
-                src="images/html-programming-advanced-technology-web-concept.jpg"
-                alt=""
-              />
+              <picture>
+                <source
+                  srcset="
+                    images/html-programming-advanced-technology-web-concept.avif
+                  "
+                  type="image/avif"
+                />
+                <img
+                  src="images/html-programming-advanced-technology-web-concept.jpg"
+                  alt=""
+                />
+              </picture>
               <!-- main Title -->
               <div
                 class="d-flex flex-column justify-content-center p-1 main-title h-100 carousel-caption"
@@ -337,14 +390,28 @@
                 <h1 class="pl-1">Welcome In Coding</h1>
 
                 <h5 class="text-muted pl-1">{ HTML 5 }</h5>
-                <button class="btn btn-dark w-auto">View This Course</button>
+                <button
+                  class="btn btn-dark w-auto"
+                  aria-label="btn"
+                  type="button"
+                >
+                  View This Course
+                </button>
               </div>
             </div>
             <div class="carousel-item h-100 w-100">
-              <img
-                src="images/php-programming-html-coding-cyberspace-concept.jpg"
-                alt=""
-              />
+              <picture>
+                <source
+                  srcset="
+                    images/html-programming-advanced-technology-web-concept.avif
+                  "
+                  type="image/avif"
+                />
+                <img
+                  src="images/php-programming-html-coding-cyberspace-concept.jpg"
+                  alt=""
+                />
+              </picture>
               <!-- main Title -->
               <div
                 class="d-flex flex-column justify-content-center p-1 main-title h-100 carousel-caption"
@@ -352,13 +419,20 @@
                 <h1 class="pl-1">Welcome In Coding</h1>
 
                 <h5 class="text-muted pl-1">{ CSS 3 }</h5>
-                <button class="btn btn-dark w-auto">View This Course</button>
+                <button
+                  class="btn btn-dark w-auto"
+                  aria-label="btn"
+                  type="button"
+                >
+                  View This Course
+                </button>
               </div>
             </div>
 
             <!-- Left and right controls -->
             <a
               class="carousel-control-prev"
+              aria-label="link"
               href="#myCarousel"
               data-slide="prev"
             >
@@ -366,6 +440,7 @@
             </a>
             <a
               class="carousel-control-next"
+              aria-label="link"
               href="#myCarousel"
               data-slide="next"
             >
@@ -394,13 +469,24 @@
                 eius sequi nesciunt alias dignissimos, nostrum exercitationem
                 magnam libero sed incidunt sunt officia?
               </p>
-              <button class="btn btn-dark">Getting Started</button>
+              <button class="btn btn-dark" aria-label="btn" type="button">
+                Getting Started
+              </button>
             </div>
-            <img
-              src="images/programming (1).png"
-              alt=""
-              class="col-lg-6 d-lg-block d-none"
-            />
+
+            <picture>
+              <source
+                srcset="
+                  images/html-programming-advanced-technology-web-concept.avif
+                "
+                type="image/avif"
+              />
+              <img
+                src="images/programming (1).png"
+                alt=""
+                class="col-lg-6 d-lg-block d-none"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -424,7 +510,13 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Tempora, impedit!
               </p>
-              <button class="btn btn-outline-dark">View This Course</button>
+              <button
+                class="btn btn-outline-dark"
+                aria-label="btn"
+                type="button"
+              >
+                View This Course
+              </button>
             </div>
           </div>
 
@@ -438,7 +530,13 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Tempora, impedit!
               </p>
-              <button class="btn btn-outline-dark">View This Course</button>
+              <button
+                class="btn btn-outline-dark"
+                aria-label="btn"
+                type="button"
+              >
+                View This Course
+              </button>
             </div>
           </div>
 
@@ -452,7 +550,13 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Tempora, impedit!
               </p>
-              <button class="btn btn-outline-dark">View This Course</button>
+              <button
+                class="btn btn-outline-dark"
+                aria-label="btn"
+                type="button"
+              >
+                View This Course
+              </button>
             </div>
           </div>
 
@@ -466,7 +570,13 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Tempora, impedit!
               </p>
-              <button class="btn btn-outline-dark">View This Course</button>
+              <button
+                class="btn btn-outline-dark"
+                aria-label="btn"
+                type="button"
+              >
+                View This Course
+              </button>
             </div>
           </div>
 
@@ -480,7 +590,13 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Tempora, impedit!
               </p>
-              <button class="btn btn-outline-dark">View This Course</button>
+              <button
+                class="btn btn-outline-dark"
+                aria-label="btn"
+                type="button"
+              >
+                View This Course
+              </button>
             </div>
           </div>
 
@@ -494,7 +610,13 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Tempora, impedit!
               </p>
-              <button class="btn btn-outline-dark">View This Course</button>
+              <button
+                class="btn btn-outline-dark"
+                aria-label="btn"
+                type="button"
+              >
+                View This Course
+              </button>
             </div>
           </div>
         </div>
@@ -510,13 +632,21 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="card d-flex flex-sm-row p-3 col-lg-4 col-8 m-2">
-            <img
-              src="images/man.png"
-              alt=""
-              class=""
-              width="100px"
-              height="100px"
-            />
+            <picture>
+              <source
+                srcset="
+                  images/html-programming-advanced-technology-web-concept.avif
+                "
+                type="image/avif"
+              />
+              <img
+                src="images/man.png"
+                alt=""
+                class=""
+                width="100px"
+                height="100px"
+              />
+            </picture>
             <div class="card-body text-center">
               <h4 class="card-title">Developer Name</h4>
               <p class="card-text">
@@ -526,13 +656,21 @@
             </div>
           </div>
           <div class="card d-flex flex-sm-row p-3 col-lg-4 col-8 m-2">
-            <img
-              src="images/man.png"
-              alt=""
-              class=""
-              width="100px"
-              height="100px"
-            />
+            <picture>
+              <source
+                srcset="
+                  images/html-programming-advanced-technology-web-concept.avif
+                "
+                type="image/avif"
+              />
+              <img
+                src="images/man.png"
+                alt=""
+                class=""
+                width="100px"
+                height="100px"
+              />
+            </picture>
             <div class="card-body text-center">
               <h4 class="card-title">Developer Name</h4>
               <p class="card-text">
@@ -542,13 +680,21 @@
             </div>
           </div>
           <div class="card d-flex flex-sm-row p-3 col-lg-4 col-8 m-2">
-            <img
-              src="images/man.png"
-              alt=""
-              class=""
-              width="100px"
-              height="100px"
-            />
+            <picture>
+              <source
+                srcset="
+                  images/html-programming-advanced-technology-web-concept.avif
+                "
+                type="image/avif"
+              />
+              <img
+                src="images/man.png"
+                alt=""
+                class=""
+                width="100px"
+                height="100px"
+              />
+            </picture>
             <div class="card-body text-center">
               <h4 class="card-title">Developer Name</h4>
               <p class="card-text">
@@ -580,6 +726,8 @@
               class="btn btn-dark mx-auto mb-2"
               data-toggle="tooltip"
               title="<code>Copy To Clipboard</code>"
+              aria-label="btn"
+              type="button"
             >
               <i class="fas fa-copy"></i>
             </button>
@@ -594,6 +742,8 @@
               <div class="code p-2 m-">print("hello World");</div>
             </div>
             <button
+              aria-label="btn"
+              type="button"
               class="btn btn-dark mx-auto mb-2"
               data-toggle="tooltip"
               title="<code>Copy To Clipboard</code>"
@@ -611,6 +761,8 @@
               <div class="code p-2 m-">System.out.println("Hello World!");</div>
             </div>
             <button
+              aria-label="btn"
+              type="button"
               class="btn btn-dark mx-auto mb-2"
               data-toggle="tooltip"
               title="<code>Copy To Clipboard</code>"
