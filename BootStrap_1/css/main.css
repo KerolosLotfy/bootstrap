@@ -5,6 +5,34 @@
   --main: #a6ecff;
 }
 
+.secTitle {
+  color: var(--main) !important;
+  position: relative;
+  width: max-content;
+  margin: auto;
+  font-size: 40px;
+}
+
+.secTitle::before,
+.secTitle::after {
+  position: absolute;
+  width: max-content;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--active);
+  font-size: 1.5em;
+}
+
+.secTitle::before {
+  left: -30px;
+  content: "{";
+}
+
+.secTitle::after {
+  right: -30px;
+  content: "}";
+}
+
 .bg-dark {
   background-color: var(--dark) !important;
 }
@@ -27,7 +55,7 @@ header {
   background-color: var(--dark);
 }
 
-header svg {
+svg {
   height: 100%;
   fill: none;
   stroke: var(--active);
@@ -35,11 +63,11 @@ header svg {
   /* animation: 1s infinite alternate linear; */
 }
 
-header .navbar-brand > h2 {
+.navbar-brand > h2 {
   height: 50px;
 }
 
-header svg > text {
+svg > text {
   stroke-width: 1;
   font-size: 20px;
   stroke: none;
@@ -47,15 +75,15 @@ header svg > text {
   text-shadow: 0px 0px 10px var(--active);
 }
 
-header h2 svg:first-of-type {
+h2 svg:first-of-type {
   animation-name: moveL;
 }
 
-header h2 svg:last-of-type {
+h2 svg:last-of-type {
   animation-name: moveR;
 }
 
-header h2 svg:nth-of-type(2) {
+h2 svg:nth-of-type(2) {
   animation-name: Hide;
 }
 
@@ -86,23 +114,26 @@ header h2 svg:nth-of-type(2) {
   }
 }
 
-.navbar ul > li > a {
+.navbar ul > li a {
   color: var(--main) !important;
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
 }
 
-.navbar ul > li > a.active {
-  background-color: #0f0 !important;
+.navbar ul > li a.active {
+  background-color: var(--active) !important;
   color: #000 !important;
   border-radius: 10px;
 }
 
 .dropdown-header {
   font-size: 20px;
-  color: #0f0;
+  color: var(--active);
 }
 
+.dropdown-menu {
+  overflow-y: scroll;
+}
 .dropdown-menu > div > div:not(:last-of-type) {
   border-right: 5px solid var(--active);
   margin-right: 10px;
@@ -110,7 +141,7 @@ header h2 svg:nth-of-type(2) {
 }
 .dropdown-menu > div > div > a:hover {
   /* border-bottom: 1px solid var(--active); */
-  background-color: #0f0;
+  background-color: var(--active);
   color: #000 !important;
   border-radius: 10px;
 }
@@ -133,7 +164,7 @@ main .main-title {
   height: 100%;
   width: 25%;
   min-width: min-content;
-  color: var(--dark);
+  color: #000;
   border-radius: 0 100vh 100vh 0;
   margin: 0;
   position: absolute;
@@ -142,12 +173,10 @@ main .main-title {
   text-align: left;
 }
 
-
-
 .main-title button {
   width: max-content !important;
   background-color: var(--active);
-  color: var(--dark);
+  color: #000;
 }
 
 .carousel {
@@ -171,7 +200,7 @@ main .main-title {
 
 .carousel-control-prev,
 .carousel-control-next {
-  background-color: #0f0;
+  background-color: var(--active);
   width: max-content;
   height: max-content;
   border-radius: 50%;
@@ -180,7 +209,6 @@ main .main-title {
   transform: translateY(-50%);
   z-index: 5;
   margin-right: 10px;
-
 }
 .carousel-control-prev {
   left: 25%;
@@ -189,10 +217,87 @@ main .main-title {
 }
 /* End main  */
 
+/* Start About */
+.jumbotron {
+  background-color: transparent;
+  color: var(--main);
+  /* border: 1px solid var(--active); */
+  /* height: 100vh; */
+}
 
-/*  */
+.jumbotron img {
+  position: relative;
+  top: -100px;
+  display: block;
+}
+/* End About */
 
-.secTitle {
+body .img {
+  width: 100%;
+  height: 65vh;
+  background-image: url("../images/mohammad-rahmani-_Fx34KeqIEw-unsplash.jpg");
+  background-size: cover;
+}
+
+.img-2 {
+  background-image: url("../images/jefferson-santos-9SoCnyQmkzI-unsplash.jpg") !important;
+}
+/*  Start Courses*/
+.card {
+  background-color: transparent;
+  border: 1px solid var(--active);
+  color: var(--main);
+  position: relative;
+}
+
+.card button {
   color: var(--main) !important;
-  
+  background-color: var(--dark) !important;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0%;
+  background-color: #0f0;
+  color: #000;
+  z-index: -1;
+  transition: 0.5s;
+}
+.card:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover {
+  color: #000;
+}
+/*  End Courses*/
+
+.code {
+  background-color: #222;
+  color: #fff;
+}
+
+code {
+  color: var(--main);
+  font-weight: bold;
+}
+
+/* footer */
+footer {
+  background-color: var(--dark);
+  color: var(--main);
+  text-align: center;
+  border-top: 1px solid var(--active);
+}
+
+footer .logo {
+  /* transform: scaleX(1.2); */
+}
+
+footer ul {
 }
