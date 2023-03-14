@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrit
+      y="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Favicon-->
+    <link
+      rel="shortcut icon"
+      href="./images/icons8-curly-brackets-96.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body
+    class="bg-dark"
+    data-spy="scroll"
+    data-target=".navbar"
+    data-offset="50"
+  >
+    <!-- Start Header -->
+    <header class="sticky-top">
+      <div class="container-fluid">
+        <div class="navbar navbar-expand-lg navbar-dark">
+          <!-- Navbar Brand -->
+          <div class="navbar-brand">
+            <h2>
+              <svg width="12px">
+                <polyline points="8,-2 8,1 7,2 6,3 6,25 " />
+                <circle cx="6" cy="26" r="5" />
+                <polyline points="6,25 6,27 6,46 8,51 " />
+              </svg>
+
+              <svg width="65px">
+                <text x="0" y="30">Coding</text>
+              </svg>
+              <svg width="12px">
+                <polyline points="1,-1 3,-1 3,2 6,3 6,25" />
+                <circle cx="6" cy="26" r="5" />
+                <polyline points="6,25 6,46 5,50 4,51 3,50" />
+              </svg>
+            </h2>
+          </div>
+          <!-- Navbar Toggler -->
+          <button
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar Collapse -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav col">
+              <li class="nav-item mb-lg-0 mb-3 mr-lg-2 text-center mr-0">
+                <a href="#home" class="nav-link active">Home</a>
+              </li>
+
+              <li class="nav-item mb-lg-0 mb-3 mr-lg-2 text-center mr-0">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+
+              <li
+                class="nav-item mb-lg-0 mb-3 mr-lg-2 text-center mr-0 dropdown"
+              >
+                <div class="btn-group">
+                  <a href="#courses" class="nav-link" data-toggle="dropdown"
+                    >Courses</a
+                  >
+                  <a
+                    class="nav-link dropdown-toggle dropdown-toggle-spilt btn"
+                    data-toggle="dropdown"
+                  ></a>
+                  <div class="dropdown-menu mt-4 bg-dark border border-dark">
+                    <div class="d-lg-flex">
+                      <div>
+                        <h3 class="dropdown-header">FrontEnd</h3>
+                        <a href="#" class="dropdown-item text-light mb-1"
+                          >HTMl 5</a
+                        ><a href="#" class="dropdown-item text-light mb-1"
+                          >CSS 3</a
+                        ><a href="#" class="dropdown-item text-light mb-1"
+                          >BootStrap </a
+                        ><a href="#" class="dropdown-item text-light mb-1"
+                          >JavaScript</a
+                        >
+                      </div>
+                      <div>
+                        <h3 class="dropdown-header">BackEnd</h3>
+                        <a href="#" class="dropdown-item text-light">Nodejs</a>
+                        <a href="#" class="dropdown-item text-light"
+                          >ExpessJs</a
+                        >
+                        <a href="#" class="dropdown-item text-light"
+                          >TypeScript</a
+                        >
+                        <a href="#" class="dropdown-item text-light">MongoDb</a>
+                        <a href="#" class="dropdown-item text-light">Testing</a>
+                      </div>
+                      <div>
+                        <h3 class="dropdown-header">Extra</h3>
+                        <a href="#" class="dropdown-item text-light"
+                          >CommandLine</a
+                        >
+                        <a href="#" class="dropdown-item text-light"
+                          >Git&GitHub</a
+                        ><a href="#" class="dropdown-item text-light"
+                          >Delpoyment</a
+                        ><a href="#" class="dropdown-item text-light">CI&CD</a><
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item mb-lg-0 mb-3 mr-lg-2 text-center mr-0">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Form -->
+            <form action="" class="form-inline">
+              <div class="input-group mr-2">
+                <input
+                  type="search"
+                  class="form-control bg-dark text-light"
+                  placeholder="Search"
+                  id="searchInput"
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-success m-0" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <button
+                class="btn btn-outline-secondary mr-2"
+                data-toggle="modal"
+                data-target="#login"
+                type="button"
+              >
+                login
+              </button>
+
+              <button
+                class="btn btn-outline-secondary mr-2"
+                data-toggle="modal"
+                data-target="#signup"
+                type="button"
+              >
+                join
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Modal  -->
+    <div class="modal fade" id="login">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <!-- header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="/action_page.php">
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input
+                  type="email"
+                  class="form-control bg-dark text-light"
+                  placeholder="Enter email"
+                  id="email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input
+                  type="password"
+                  class="form-control bg-dark text-light"
+                  placeholder="Enter password"
+                  id="pwd"
+                />
+              </div>
+              <div class="form-group">
+                <a href="#"> Forget password?</a>
+              </div>
+              <div class="form-group form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" /> Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Modal  -->
+    <div class="modal fade" id="signup">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-light">
+          <!-- header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Signup</h4>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="/action_page.php" class="was-validated">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control bg-dark text-light"
+                  placeholder="Name"
+                  id="name"
+                  required
+                />
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-group">
+                <label for="userName">Username</label>
+                <input
+                  type="text"
+                  class="form-control bg-dark text-light"
+                  placeholder="User Name"
+                  id="userName"
+                  required
+                />
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input
+                  type="email"
+                  class="form-control bg-dark text-light"
+                  placeholder="Enter email"
+                  id="email"
+                  required
+                />
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input
+                  type="password"
+                  class="form-control bg-dark text-light"
+                  placeholder="Enter password"
+                  id="pwd"
+                  required
+                />
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-group">
+                <a href="#"> Forget password?</a>
+              </div>
+              <div class="form-group form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" /> Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Join</button>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal  -->
+
+    <!-- Start Main -->
+    <main id="home">
+      <div class="container-fluid p-0 h-100 w-100">
+        <!-- Carousel -->
+        <div class="carousel slide h-100" date-ride="carousel" id="myCarousel">
+          <!-- indicators -->
+          <ul class="carousel-indicators">
+            <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+            <li class="" data-target="#myCarousel" data-slide-to="1"></li>
+            <li class="" data-target="#myCarousel" data-slide-to="2"></li>
+          </ul>
+
+          <!-- SlideShow -->
+          <div class="carousel-inner h-100 w-100">
+            <div class="carousel-item h-100 w-100 active">
+              <img src="images/working-code.jpg" alt="" />
+              <!-- main Title -->
+              <div
+                class="d-flex flex-column justify-content-center p-1 main-title h-100 carousel-caption"
+              >
+                <h2 class="pl-1">Welcome In Coding</h2>
+
+                <h5 class="text-muted pl-1">{ JavaScript }</h5>
+                <button class="btn btn-dark w-auto">View This Course</button>
+              </div>
+            </div>
+            <div class="carousel-item h-100 w-100">
+              <img
+                src="images/html-programming-advanced-technology-web-concept.jpg"
+                alt=""
+              />
+              <!-- main Title -->
+              <div
+                class="d-flex flex-column justify-content-center p-1 main-title h-100 carousel-caption"
+              >
+                <h1 class="pl-1">Welcome In Coding</h1>
+
+                <h5 class="text-muted pl-1">{ HTML 5 }</h5>
+                <button class="btn btn-dark w-auto">View This Course</button>
+              </div>
+            </div>
+            <div class="carousel-item h-100 w-100">
+              <img
+                src="images/php-programming-html-coding-cyberspace-concept.jpg"
+                alt=""
+              />
+              <!-- main Title -->
+              <div
+                class="d-flex flex-column justify-content-center p-1 main-title h-100 carousel-caption"
+              >
+                <h1 class="pl-1">Welcome In Coding</h1>
+
+                <h5 class="text-muted pl-1">{ CSS 3 }</h5>
+                <button class="btn btn-dark w-auto">View This Course</button>
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a
+              class="carousel-control-prev"
+              href="#myCarousel"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#myCarousel"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End Main -->
+
+    <!-- Start About  -->
+    <section id="about" class="my-2 pt-5">
+      <h2 class="secTitle text-light text-center w-1oo mb-5">About</h2>
+      <div class="jumbotron m-0 p-0">
+        <div class="container">
+          <div class="row">
+            <div class="col h-100">
+              <h1>Welcome In Coding</h1>
+              <p class="text-muted">
+                Learning All programming languages in One Source
+              </p>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus, sit quibusdam quis cum, harum laborum optio voluptates
+                eius sequi nesciunt alias dignissimos, nostrum exercitationem
+                magnam libero sed incidunt sunt officia?
+              </p>
+              <button class="btn btn-dark">Getting Started</button>
+            </div>
+            <img
+              src="images/programming (1).png"
+              alt=""
+              class="col-lg-6 d-lg-block d-none"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About  -->
+
+    <div class="img"></div>
+
+    <!-- Start Courses  -->
+    <section id="courses" class="my-2 pt-5">
+      <h2 class="secTitle text-light text-center w-1oo mb-5">Courses</h2>
+      <div class="container">
+        <div class="row justify-content-around card-columns">
+          <div
+            class="card col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 text-center"
+          >
+            <i class="fab fa-html5 card-img-top fa-7x text-center"></i>
+            <div class="card-body">
+              <h4 class="card-title">Course HTML</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempora, impedit!
+              </p>
+              <button class="btn btn-outline-dark">View This Course</button>
+            </div>
+          </div>
+
+          <div
+            class="card col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 text-center"
+          >
+            <i class="fab fa-css3-alt card-img-top fa-7x text-center"></i>
+            <div class="card-body">
+              <h4 class="card-title">Course CSS3</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempora, impedit!
+              </p>
+              <button class="btn btn-outline-dark">View This Course</button>
+            </div>
+          </div>
+
+          <div
+            class="card col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 text-center"
+          >
+            <i class="fab fa-js card-img-top fa-7x text-center"></i>
+            <div class="card-body">
+              <h4 class="card-title">Course JavaScript</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempora, impedit!
+              </p>
+              <button class="btn btn-outline-dark">View This Course</button>
+            </div>
+          </div>
+
+          <div
+            class="card col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 text-center"
+          >
+            <i class="fab fa-bootstrap card-img-top fa-7x text-center"></i>
+            <div class="card-body">
+              <h4 class="card-title">Course Bootstrap</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempora, impedit!
+              </p>
+              <button class="btn btn-outline-dark">View This Course</button>
+            </div>
+          </div>
+
+          <div
+            class="card col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 text-center"
+          >
+            <i class="fab fa-python card-img-top fa-7x text-center"></i>
+            <div class="card-body">
+              <h4 class="card-title">Course Python</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempora, impedit!
+              </p>
+              <button class="btn btn-outline-dark">View This Course</button>
+            </div>
+          </div>
+
+          <div
+            class="card col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 text-center"
+          >
+            <i class="fab fa-node-js card-img-top fa-7x text-center"></i>
+            <div class="card-body">
+              <h4 class="card-title">Course NodeJs</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Tempora, impedit!
+              </p>
+              <button class="btn btn-outline-dark">View This Course</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Courses  -->
+
+    <div class="img img-2"></div>
+
+    <!-- Start Team  -->
+    <section id="team" class="my-2 pt-5">
+      <h2 class="secTitle text-light text-center w-1oo mb-5">Our Team</h2>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="card d-flex flex-sm-row p-3 col-lg-4 col-8 m-2">
+            <img
+              src="images/man.png"
+              alt=""
+              class=""
+              width="100px"
+              height="100px"
+            />
+            <div class="card-body text-center">
+              <h4 class="card-title">Developer Name</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+                dolorem?
+              </p>
+            </div>
+          </div>
+          <div class="card d-flex flex-sm-row p-3 col-lg-4 col-8 m-2">
+            <img
+              src="images/man.png"
+              alt=""
+              class=""
+              width="100px"
+              height="100px"
+            />
+            <div class="card-body text-center">
+              <h4 class="card-title">Developer Name</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+                dolorem?
+              </p>
+            </div>
+          </div>
+          <div class="card d-flex flex-sm-row p-3 col-lg-4 col-8 m-2">
+            <img
+              src="images/man.png"
+              alt=""
+              class=""
+              width="100px"
+              height="100px"
+            />
+            <div class="card-body text-center">
+              <h4 class="card-title">Developer Name</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+                dolorem?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Team  -->
+
+    <!-- Start Try  -->
+    <section id="try" class="my-2 pt-5">
+      <h2 class="secTitle text-light text-center w-1oo mb-5">Try Code</h2>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="card m-2 text-center">
+            <div class="card-body">
+              <h4 class="card-title">Javascript</h4>
+              <p class="card-text">
+                try the code below from here
+                <a href="#">Here</a>
+              </p>
+              <div class="code p-2 m-">console.log("hello World");</div>
+            </div>
+            <button
+              class="btn btn-dark mx-auto mb-2"
+              data-toggle="tooltip"
+              title="<code>Copy To Clipboard</code>"
+            >
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+          <div class="card m-2 text-center">
+            <div class="card-body">
+              <h4 class="card-title">Python</h4>
+              <p class="card-text">
+                try the code below from here
+                <a href="#">Here</a>
+              </p>
+              <div class="code p-2 m-">print("hello World");</div>
+            </div>
+            <button
+              class="btn btn-dark mx-auto mb-2"
+              data-toggle="tooltip"
+              title="<code>Copy To Clipboard</code>"
+            >
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+          <div class="card m-2 text-center">
+            <div class="card-body">
+              <h4 class="card-title">Java</h4>
+              <p class="card-text">
+                try the code below from here
+                <a href="#">Here</a>
+              </p>
+              <div class="code p-2 m-">System.out.println("Hello World!");</div>
+            </div>
+            <button
+              class="btn btn-dark mx-auto mb-2"
+              data-toggle="tooltip"
+              title="<code>Copy To Clipboard</code>"
+            >
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Try  -->
+
+    <!-- Start Footer -->
+    <footer class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="logo col-lg col-12">
+            <svg width="12px">
+              <polyline points="8,-2 8,1 7,2 6,3 6,25 " />
+              <circle cx="6" cy="26" r="5" />
+              <polyline points="6,25 6,27 6,46 8,51 " />
+            </svg>
+
+            <svg width="65px">
+              <text x="0" y="30">Coding</text>
+            </svg>
+            <svg width="12px">
+              <polyline points="1,-1 3,-1 3,2 6,3 6,25" />
+              <circle cx="6" cy="26" r="5" />
+              <polyline points="6,25 6,46 5,50 4,51 3,50" />
+            </svg>
+          </div>
+
+          <ul class="col-lg col-sm-4 list-unstyled">
+            <li class="header text-muted">
+              <h5>Important Links</h5>
+            </li>
+            <li>
+              <a href="#" class="text-reset">
+                <i class="fab mr-1 fa-facebook"></i>
+                facebook
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-reset">
+                <i class="fab mr-1 fa-youtube"></i>
+                Youtube
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-reset">
+                <i class="fab mr-1 fa-linkedin"></i>
+                linkedin
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-reset">
+                <i class="fab mr-1 fa-whatsapp"></i>
+                WhatsApp
+              </a>
+            </li>
+          </ul>
+
+          <ul class="col-lg col-sm-4 list-unstyled">
+            <li class="header text-muted">
+              <h5>Contact Us</h5>
+            </li>
+            <li>
+              <a href="#" class="text-reset">
+                <i class="fas fa-phone mr-1"></i>
+                000-000-000
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-reset">
+                <i class="fas fa-map-marked mr-1"></i>
+                Egypt
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-reset">
+                <i class="fas fa-fax mr-1"></i>
+                000-000-000
+              </a>
+            </li>
+          </ul>
+
+          <ul class="col-lg col-sm-4 list-unstyled">
+            <li class="header text-muted">
+              <h5>Made By</h5>
+            </li>
+            <li>
+              <a href="#" class="text-reset">
+                <!-- <i class="fab mr-1 fa-facebook"></i> -->
+                <i class="fas fa-user mr-1"></i>
+                Kerolos
+              </a>
+            </li>
+          </ul>
+
+          <p class="col-12">Copyright © 2022 All rights</p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#searchInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $(".navbar-nav > li > a ").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+
+        $('[data-toggle="tooltip"]').tooltip({
+          animation: true,
+          delay: { show: 200, hide: 100 },
+          placement: "right",
+          html: true,
+        });
+      });
+
+      let codyBtn = document.querySelectorAll('[data-toggle="tooltip"]');
+      codyBtn.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          let text = btn.parentElement.children["0"].children["2"].innerHTML;
+          navigator.clipboard.writeText(text);
+          btn.setAttribute("data-original-title", "coped");
+        });
+      });
+
+      let nav_items = document.querySelectorAll(".navbar-nav > .nav-item > a");
+      nav_items.forEach((link) => {
+        link.addEventListener("click", () => {
+          nav_items.forEach((link) => {
+            link.classList.remove("active");
+          });
+          link.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
