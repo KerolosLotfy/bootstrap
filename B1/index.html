@@ -134,12 +134,8 @@
             <!-- Form -->
             <form action="" class="form-inline">
               <div class="input-group mr-2">
-                <input
-                  type="search"
-                  class="form-control bg-dark text-light"
-                  placeholder="Search"
-                  id="searchInput"
-                />
+                <input type="search" class="form-control bg-dark text-light"
+                placeholder="Search by Courses id="searchInput" />
                 <div class="input-group-append">
                   <button class="btn btn-success m-0" type="submit">
                     <i class="fa fa-search" aria-hidden="true"></i>
@@ -703,15 +699,24 @@
           </ul>
 
           <ul class="col-lg col-sm-4 list-unstyled">
-            <li class="header text-muted">
-              <h5>Made By</h5>
+            <li class="header text-muted my-2">
+              <h5>Date</h5>
             </li>
             <li>
-              <a href="#" class="text-reset">
-                <!-- <i class="fab mr-1 fa-facebook"></i> -->
-                <i class="fas fa-user mr-1"></i>
-                Kerolos
-              </a>
+              <i class="fas fa-calendar-alt mr-1"></i>
+              <span id="date"></span>
+            </li>
+            <li class="header text-muted my-3">
+              <h5>Clock</h5>
+            </li>
+            <li>
+              <i class="fas fa-clock mr-1"></i>
+              <span id="time">
+                <i class="hour">00 </i>
+                <i class="min">00 </i>
+                <i class="sec">00</i>
+                <i class="d ml-1">AM</i>
+              </span>
             </li>
           </ul>
 
@@ -737,8 +742,10 @@
       $(document).ready(function () {
         $("#searchInput").on("keyup", function () {
           var value = $(this).val().toLowerCase();
-          $(".navbar-nav > li > a ").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          $("#courses .card .card-title ").filter(function () {
+            $(this.parentElement.parentElement).toggle(
+              $(this).text().toLowerCase().indexOf(value) > -1
+            );
           });
         });
 
@@ -768,6 +775,24 @@
           link.classList.add("active");
         });
       });
+
+      // Date & Time
+      setInterval(() => {
+        // Date
+        let d = new Date();
+        let date = document.querySelector("#date");
+        date.innerHTML = d.toLocaleDateString();
+        // time
+        let time = document.querySelector("#time");
+        let h = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+        let dd = h >= 12 ? "PM" : "AM";
+        time.children[0].innerText = h >= 10 ? h : "0" + h;
+        time.children[1].innerText = m >= 10 ? m : "0" + m;
+        time.children[2].innerText = s >= 10 ? s : "0" + s;
+        time.children[3].innerText = dd;
+      }, 1000);
     </script>
   </body>
 </html>
