@@ -900,6 +900,16 @@
     </footer>
     <!-- End Footer -->
 
+    <script>
+      // Loading
+      let loading = document.querySelector("#loading");
+      window.onload = () => {
+        loading.classList.add("show");
+        setTimeout(() => {
+          loading.classList.remove("show");
+        }, 2000);
+      };
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -913,15 +923,6 @@
     ></script>
 
     <script>
-      // Loading
-      let loading = document.querySelector("#loading");
-      window.onload = () => {
-        loading.classList.add("show");
-        setTimeout(() => {
-          loading.classList.remove("show");
-        }, 2000);
-      };
-      
       $(document).ready(function () {
         $("#searchInput").on("keyup", function () {
           var value = $(this).val().toLowerCase();
