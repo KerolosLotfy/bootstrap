@@ -30,7 +30,10 @@
     data-offset="50"
   >
     <!-- Start Loading -->
-    <div id="loading" class="d-flex justify-content-center align-items-center">
+    <div
+      id="loading"
+      class="d-flex justify-content-center align-items-center show"
+    >
       <h2>
         <svg width="12px">
           <polyline points="8,-2 8,1 7,2 6,3 6,25 " />
@@ -372,7 +375,8 @@
           <div class="carousel-inner h-100 w-100">
             <div class="carousel-item h-100 w-100 active">
               <picture>
-                <!-- <source srcset="images/working-code.avif" type="image/avif" /> -->
+                <source srcset="images/working-code.avif" type="image/avif" />
+                <source srcset="images/working-code.webp" type="image/webp" />
                 <img src="images/working-code.jpg" alt="Description" />
               </picture>
               <!-- main Title -->
@@ -900,16 +904,6 @@
     </footer>
     <!-- End Footer -->
 
-    <script>
-      // Loading
-      let loading = document.querySelector("#loading");
-      window.onload = () => {
-        loading.classList.add("show");
-        setTimeout(() => {
-          loading.classList.remove("show");
-        }, 2000);
-      };
-    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -923,6 +917,15 @@
     ></script>
 
     <script>
+      // Loading
+      let loading = document.querySelector("#loading");
+      window.onload = () => {
+        // loading.classList.add("show");
+        setTimeout(() => {
+          loading.classList.remove("show");
+        }, 2000);
+      };
+
       $(document).ready(function () {
         $("#searchInput").on("keyup", function () {
           var value = $(this).val().toLowerCase();
