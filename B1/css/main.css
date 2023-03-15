@@ -1,6 +1,5 @@
 :root {
   --dark: #151e11;
-  /* #7095B2 */
   --active: #0f0;
   --main: #a6ecff;
 }
@@ -60,7 +59,6 @@ svg {
   fill: none;
   stroke: var(--active);
   stroke-width: 3;
-  /* animation: 1s infinite alternate linear; */
 }
 
 .navbar-brand > h2 {
@@ -75,15 +73,39 @@ svg > text {
   text-shadow: 0px 0px 10px var(--active);
 }
 
-h2 svg:first-of-type {
+/* Start Loading */
+#loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--dark);
+  z-index: 2000;
+  width: 100vw;
+  height: 100vh;
+  display: none !important;
+}
+
+#loading.show {
+  display: flex !important;
+}
+
+#loading h2 {
+  height: 50px;
+  transform: scale(1.2);
+}
+
+#loading svg {
+  animation: 1s infinite alternate linear;
+}
+#loading svg:first-of-type {
   animation-name: moveL;
 }
 
-h2 svg:last-of-type {
+#loading svg:last-of-type {
   animation-name: moveR;
 }
 
-h2 svg:nth-of-type(2) {
+#loading svg:nth-of-type(2) {
   animation-name: Hide;
 }
 
@@ -113,6 +135,7 @@ h2 svg:nth-of-type(2) {
     transform: scale(0);
   }
 }
+/* End Loading */
 
 .navbar ul > li a {
   color: var(--main) !important;
@@ -146,10 +169,6 @@ h2 svg:nth-of-type(2) {
   border-radius: 10px;
 }
 /* End header  */
-
-/* Start Modal */
-
-/* End Modal   */
 
 /* Start main  */
 main {
@@ -221,8 +240,6 @@ main .main-title {
 .jumbotron {
   background-color: transparent;
   color: var(--main);
-  /* border: 1px solid var(--active); */
-  /* height: 100vh; */
 }
 
 .jumbotron img {

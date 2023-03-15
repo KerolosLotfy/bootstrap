@@ -29,6 +29,27 @@
     data-target=".navbar"
     data-offset="50"
   >
+    <!-- Start Loading -->
+    <div id="loading" class="d-flex justify-content-center align-items-center">
+      <h2>
+        <svg width="12px">
+          <polyline points="8,-2 8,1 7,2 6,3 6,25 " />
+          <circle cx="6" cy="26" r="5" />
+          <polyline points="6,25 6,27 6,46 8,51 " />
+        </svg>
+
+        <svg width="65px">
+          <text x="0" y="30">Coding</text>
+        </svg>
+        <svg width="12px">
+          <polyline points="1,-1 3,-1 3,2 6,3 6,25" />
+          <circle cx="6" cy="26" r="5" />
+          <polyline points="6,25 6,46 5,50 4,51 3,50" />
+        </svg>
+      </h2>
+    </div>
+    <!-- End Loading -->
+
     <!-- Start Header -->
     <header class="sticky-top">
       <div class="container-fluid">
@@ -946,6 +967,16 @@
         time.children[2].innerText = s >= 10 ? s : "0" + s;
         time.children[3].innerText = dd;
       }, 1000);
+
+      // Loading
+      let loading = document.querySelector("#loading");
+
+      window.onload = () => {
+        loading.classList.add("show");
+        setTimeout(() => {
+          loading.classList.remove("show");
+        }, 2000);
+      };
     </script>
   </body>
 </html>
