@@ -22,18 +22,6 @@
       href="./images/icons8-curly-brackets-96.png"
       type="image/x-icon"
     />
-
-    <script>
-      // Loading
-      let loading = document.querySelector("#loading");
-
-      window.onload = () => {
-        loading.classList.add("show");
-        setTimeout(() => {
-          loading.classList.remove("show");
-        }, 2000);
-      };
-    </script>
   </head>
   <body
     class="bg-dark"
@@ -925,6 +913,15 @@
     ></script>
 
     <script>
+      // Loading
+      let loading = document.querySelector("#loading");
+      window.onload = () => {
+        loading.classList.add("show");
+        setTimeout(() => {
+          loading.classList.remove("show");
+        }, 2000);
+      };
+      
       $(document).ready(function () {
         $("#searchInput").on("keyup", function () {
           var value = $(this).val().toLowerCase();
